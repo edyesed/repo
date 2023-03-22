@@ -1,0 +1,30 @@
+# Stuff At the Top for visibility
+AllowedUserOverrides:
+  - Enabled
+  - Severity
+  - YamlExcludeFilters
+  - Config.ExcludeServiceToServiceCalls # a config specific to this
+  - Destinations
+YamlExcludeFilters: None
+Config:
+  ExcludeServiceToServiceCalls: True
+## existing stuff below
+AnalysisType: rule
+Description: 'Hello Words'
+DisplayName: This is the base item to be inherited
+Enabled: true
+Filename: another_file.py
+Reports:
+    MITRE ATT&CK:
+        - TA0000:T0000
+Runbook: Meaningful runbook goes here
+Severity: Medium
+Tests:
+    - ExpectedResult: true
+      Log:
+        item: yes
+DedupPeriodMinutes: 60
+LogTypes:
+    - Some.Log
+RuleID: A.Rule.ID
+Threshold: 1
